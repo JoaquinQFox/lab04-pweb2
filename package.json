@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JoaquinQFox/lab04-pweb2/issues"
   },
-  "homepage": "https://github.com/JoaquinQFox/lab04-pweb2#readme"
+  "homepage": "https://github.com/JoaquinQFox/lab04-pweb2#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "markdown-it": "^14.1.0"
+  }
 }

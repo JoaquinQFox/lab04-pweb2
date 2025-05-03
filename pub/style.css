@@ -56,12 +56,12 @@ h1 {
 
 #tituloArchivoDiv {
     border-bottom: 1px solid black;
-    padding: 12px 16px;
     font-weight: bold;
+    padding: 10px 20px;
 }
 
 #divTextoArchivo {
-    padding: 12px 16px;
+    padding: 10px 20px;
 }
 
 #crearMd {

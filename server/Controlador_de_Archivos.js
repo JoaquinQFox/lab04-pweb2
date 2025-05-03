@@ -16,3 +16,16 @@ function leerArchivoComoHTML(nombreArchivo) {
     const markdown = fs.readFileSync(rutaArchivo, 'utf-8');
     return marked(markdown);
 }
+
+function crearArchivoMarkdown(nombreArchivo, contenido) {
+    const nombreSeguro = nombreArchivo.endsWith('.md') ? nombreArchivo : `${nombreArchivo}.md`;
+    const rutaArchivo = path.join(directorioMarkdown, nombreSeguro);
+    try {
+        fs.writeFyleSync(rutaArchivo, contenido);
+        return true;
+    } catch (err) {
+        console.error(err);
+        return false;
+    }
+}
+

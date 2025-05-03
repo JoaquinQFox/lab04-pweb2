@@ -6,7 +6,21 @@
     <title>Markdown to html</title>
 </head>
 <body>
-    <h1>Hola mundo</h1>
-   
+    <h1>Lector de Markdown</h1>
+    <section id="sectionListaMd">
+        <h2>Lista de archivos Markdown disponibles:</h2>
+        <div class="listaArchivosMd">
+        </div>
+    </section>
+    <section id="sectionTextoMd">
+        Aqui ira el texto MD, traducido, después de agregarlo
+    </section>
+    <section id="crearMd">
+        <input type="text" id="nombreArchivo">
+        <form id="formEditarMd">
+            <textarea id="textoMd"></textarea>
+            <button type="submit">Guardar archivo</button>
+        </form>
+    </section>
 </body>
 </html>

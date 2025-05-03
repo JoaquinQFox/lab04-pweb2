@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown to html</title>
-</head>
-<body>
-    <h1>Lector de Markdown</h1>
-    <section id="sectionListaMd">
-        <h2>Lista de archivos Markdown disponibles:</h2>
-        <div class="listaArchivosMd">
-        </div>
-    </section>
-    <section id="sectionTextoMd">
-        Aqui ira el texto MD, traducido, después de agregarlo
-    </section>
-    <section id="crearMd">
-        <input type="text" id="nombreArchivo">
-        <form id="formEditarMd">
-            <textarea id="textoMd"></textarea>
-            <button type="submit">Guardar archivo</button>
-        </form>
-    </section>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Markdown to html</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Lector de Markdown</h1>
+        </header>
+
+        <section id="sectionListaMd">
+            <h2>Lista de archivos Markdown disponibles:</h2>
+            <p>Elija uno de los siguientes arhivos</p>
+            <div id="listaDiv">
+                <li><a href="">Archivo.md</a></li>
+            </div>
+            <div class="listaArchivosMd"></div>
+        </section>
+
+        <section id="sectionMostrarMd">
+            <div id="tituloArchivoDiv">
+                <p id="nombreMostrarMd">archivo.md</p>
+            </div>
+            <div id="divTextoArchivo">Elementos del MD</div>
+        </section>
+
+        <section id="crearMd">
+            <h2>Editar Md</h2>
+            <form id="formEditarMd">
+                <div class="formDiv">
+                    <label for="nombreArchivoMd">Nombre:</label>
+                    <input type="text" id="nombreArchivoMd" autocomplete="off"/>
+                </div>
+                <div class="formDiv">
+                    <label for="textoMd">Contenido:</label>
+                    <textarea id="textoMd" spellcheck="false"></textarea>
+                </div>
+                <div class="formDiv">
+                    <button type="submit">Guardar archivo</button>
+                </div>
+            </form>
+        </section>
+    </body>
 </html>

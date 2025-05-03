@@ -1,6 +1,6 @@
 const servidor_express=require("express");
  const{listarArchivos,leerArchivoComoHTML,crearArchivoMarkdown}=require("./Controlador_de_Archivos.js");
-  const rutas=servidor_express();
+  const rutas=servidor_express.Router();
 
 rutas.get('/archivos', (solicitud,respuesta) => {
     const archivos = listarArchivos();
@@ -26,3 +26,5 @@ rutas.post('/archivos', (solicitud,respuesta) => {
         respuesta.status(500).json('Error al crear el archivo');
     }
 });
+
+module.exports = rutas;

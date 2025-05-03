@@ -29,3 +29,4 @@ function crearArchivoMarkdown(nombreArchivo, contenido) {
     }
 }
 
+module.exports = { listarArchivos, leerArchivoComoHTML, crearArchivoMarkdown };

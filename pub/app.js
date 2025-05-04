@@ -21,10 +21,12 @@ function listarArchivos(data) {
 }
 
 function cargarArchivo (nombreArchivo) {
-	console.log(nombreArchivo);
+
+	document.getElementById("nombreMostrarMd").innerHTML = nombreArchivo;
+
 	fetch ("/api/archivos/"+nombreArchivo)
 		.then(respuesta => respuesta.json())
 		.then(data => {
-			console.log(data);
-		});
+			document.getElementById("divTextoArchivo").innerHTML = data.contenidoHTML;
+		})
 }

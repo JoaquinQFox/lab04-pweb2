@@ -10,12 +10,11 @@ function cargarArchivos () {
 }
 
 function listarArchivos(data) {
-	let lista = "<ul>";
+	let lista = "";
 
-	for (let i = 0 ; i < data.length ; i++) {
-		lista += "<li><a>" + data[i] + "</a></li>";
+	for (let i = 0 ; i < data.archivos.length ; i++) {
+		lista += "<li><a>" + data.archivos[i] + "</a></li>";
 	}
 
-	lista += "</ul>";
 	document.getElementById("listaDiv").innerHTML = lista;
 }

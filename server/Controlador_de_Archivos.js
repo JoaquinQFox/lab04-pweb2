@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
 
-const directorioMarkdown =path.join(__dirname, 'markdowns');
+const directorioMarkdown =path.join(__dirname, 'markdown');
 
 function listarArchivos() {
     return fs.readdirSync(directorioMarkdown).filter(archivo => archivo.endsWith('.md'))

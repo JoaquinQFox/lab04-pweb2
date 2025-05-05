@@ -46,6 +46,8 @@ function cargarArchivo (nombreArchivo) {
 		.then(data => {
 			document.getElementById("divTextoArchivo").innerHTML = data.contenidoHTML;
 		})
+
+	document.getElementById("sectionMostrarMd").style.display = "block";
 }
 
 function crearArchivo () {

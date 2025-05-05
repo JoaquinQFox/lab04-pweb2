@@ -50,9 +50,9 @@ function cargarArchivo (nombreArchivo) {
 
 function crearArchivo () {
 	
-	const nombre = document.getElementById("nombreArchivoMd").value;
-	const texto = document.getElementById("textoMd").value;
-	const data = {nombre, texto}
+	const nombreArchivo = document.getElementById("nombreArchivoMd").value;
+	const contenido     = document.getElementById("textoMd").value;
+	const data          = {nombreArchivo, contenido}
 
 	const solicitud = {
 		method: "POST",

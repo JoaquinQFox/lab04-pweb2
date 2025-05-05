@@ -27,6 +27,7 @@ header h1 {
     text-align: center;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
 }
 
 #sectionListaMd {
@@ -80,9 +81,11 @@ header h1 {
 }
 
 #tituloArchivoDiv {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #d1d9e0;
     font-weight: bold;
     padding: 10px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 #divTextoArchivo {

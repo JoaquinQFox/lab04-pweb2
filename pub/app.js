@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', cargarArchivos);
 document.addEventListener('DOMContentLoaded', formularioVerificador);
-document.querySelector("#formEditarMd").onsubmit = crearArchivo;
+document.addEventListener('submit', crearArchivo);
 
 function formularioVerificador () {
 	const nombre = document.querySelector("#nombreArchivoMd");
@@ -26,7 +26,7 @@ function cargarArchivos () {
 		})
 }
 
-function listarArchivos(data) {
+function listarArchivos (data) {
 	
 	let lista = "";
 
@@ -57,8 +57,15 @@ function crearArchivo () {
 	const solicitud = {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringfy(data);
+		body: JSON.stringify(data)
 	}
-	
-	fetch ("/api/archivo")
+
+	fetch ("/api/archivo", solicitud)
+		.then(respuesta => respuesta.json())
+		.then(data => {
+			alert(JSON.stringify(data));
+			cargarArchivos();
+		})
+
+	return false;
 }

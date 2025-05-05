@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', cargarArchivos);
 document.addEventListener('DOMContentLoaded', formularioVerificador);
+document.querySelector("#formEditarMd").onsubmit = crearArchivo;
 
 function formularioVerificador () {
 	const nombre = document.querySelector("#nombreArchivoMd");
@@ -47,3 +48,17 @@ function cargarArchivo (nombreArchivo) {
 		})
 }
 
+function crearArchivo () {
+	
+	const nombre = document.getElementById("nombreArchivoMd").value;
+	const texto = document.getElementById("textoMd").value;
+	const data = {nombre, texto}
+
+	const solicitud = {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringfy(data);
+	}
+	
+	fetch ("/api/archivo")
+}

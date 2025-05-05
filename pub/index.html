@@ -16,7 +16,9 @@
             <h2>Lista de archivos Markdown disponibles:</h2>
             <p>Elija uno de los siguientes arhivos</p>
             <div id="listaDiv">
-                <li><a href="">Archivo.md</a></li>
+                <li><a onclick="cargarArchivo()">Archivo.md</a></li>
+                <li><a onclick="cargarArchivo()">Archivo.md</a></li>
+                <li><a onclick="cargarArchivo()">Archivo.md</a></li>
             </div>
             <div class="listaArchivosMd"></div>
         </section>
@@ -25,7 +27,145 @@
             <div id="tituloArchivoDiv">
                 <p id="nombreMostrarMd">archivo.md</p>
             </div>
-            <div id="divTextoArchivo">Elementos del MD</div>
+            <div id="divTextoArchivo">
+                <h2>🎮 Five Nights at Freddy's (FNaF)</h2>
+                <blockquote>
+                    <p>"It's me."<br />—Freddy Fazbear</p>
+                </blockquote>
+                <hr />
+
+                <h3>📌 Introducción</h3>
+                <p>
+                    <strong>Five Nights at Freddy's</strong> es una saga de
+                    videojuegos de terror creada por <em>Scott Cawthon</em>. El
+                    jugador asume el rol de un guardia nocturno que debe
+                    sobrevivir cinco noches mientras vigila animatrónicos con
+                    comportamientos extraños.
+                </p>
+                <hr />
+
+                <h3>🧟‍♂️ Animatrónicos Principales</h3>
+                <ol>
+                    <li>Freddy Fazbear 🐻</li>
+                    <li>Bonnie the Bunny 🐰</li>
+                    <li>Chica the Chicken 🐤</li>
+                    <li>Foxy the Pirate 🦊</li>
+                    <li>Golden Freddy ✨</li>
+                </ol>
+                <hr />
+
+                <h3>📅 Juegos de la Saga</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Juego</th>
+                            <th>Año</th>
+                            <th>Plataforma</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FNaF 1</td>
+                            <td>2014</td>
+                            <td>PC, Android, iOS</td>
+                        </tr>
+                        <tr>
+                            <td>FNaF 2</td>
+                            <td>2014</td>
+                            <td>PC, Android, iOS</td>
+                        </tr>
+                        <tr>
+                            <td>FNaF 3</td>
+                            <td>2015</td>
+                            <td>PC, Android, iOS</td>
+                        </tr>
+                        <tr>
+                            <td>FNaF 4</td>
+                            <td>2015</td>
+                            <td>PC, Android, iOS</td>
+                        </tr>
+                        <tr>
+                            <td>Sister Location</td>
+                            <td>2016</td>
+                            <td>PC, Consolas</td>
+                        </tr>
+                        <tr>
+                            <td>Pizzeria Simulator</td>
+                            <td>2017</td>
+                            <td>PC</td>
+                        </tr>
+                        <tr>
+                            <td>Help Wanted</td>
+                            <td>2019</td>
+                            <td>VR</td>
+                        </tr>
+                        <tr>
+                            <td>Security Breach</td>
+                            <td>2021</td>
+                            <td>PC, Consolas</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+
+                <h3>🔗 Enlaces Útiles</h3>
+                <ul>
+                    <li>
+                        <a href="https://scottgames.com/"
+                            >Sitio oficial de Scott Cawthon</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://freddy-fazbears-pizza.fandom.com/es/wiki/Five_Nights_at_Freddy%27s_Wiki"
+                            >Wiki de FNaF</a
+                        >
+                    </li>
+                </ul>
+                <hr />
+
+                <h3>🖼️ Imagen</h3>
+                <p>
+                    <img
+                        src="https://static.wikia.nocookie.net/freddy-fazbears-pizza/images/4/4b/Freddy_Render.png"
+                        alt="Freddy Fazbear"
+                    />
+                </p>
+                <hr />
+
+                <h3>🧠 Datos Curiosos</h3>
+                <ul>
+                    <li>
+                        El primer juego fue desarrollado en solo
+                        <strong>6 meses</strong>.
+                    </li>
+                    <li>
+                        FNaF inspiró a muchos otros juegos de terror con estilo
+                        minimalista.
+                    </li>
+                    <li>
+                        Existen <strong>novelas y libros</strong> oficiales de
+                        la saga.
+                    </li>
+                </ul>
+                <hr />
+
+                <h3>💻 Código Simulado (en pseudo-JavaScript)</h3>
+                <pre><code class="language-javascript">if (cameraDisabled &amp;&amp; Freddy.isNear()) {
+  playSound("jumpscare");
+  gameOver();
+}
+</code></pre>
+                <hr />
+
+                <h3>✅ Conclusión</h3>
+                <p>
+                    Five Nights at Freddy's es mucho más que un juego de terror.
+                    Es un universo con su propia mitología, personajes y
+                    teorías. Si te atreves...
+                    <strong>¡cierra la puerta y escucha con atención!</strong>
+                </p>
+            </div>
         </section>
 
         <section id="crearMd">
@@ -33,14 +173,22 @@
             <form id="formEditarMd">
                 <div class="formDiv">
                     <label for="nombreArchivoMd">Nombre:</label>
-                    <input type="text" id="nombreArchivoMd" autocomplete="off"/>
+                    <input
+                        type="text"
+                        id="nombreArchivoMd"
+                        autocomplete="off"
+                    />
                 </div>
                 <div class="formDiv">
                     <label for="textoMd">Contenido:</label>
                     <textarea id="textoMd" spellcheck="false"></textarea>
                 </div>
                 <div class="formDiv">
-                    <input type="submit" id="guardarArchivo" value="Guardar archivo">
+                    <input
+                        type="submit"
+                        id="guardarArchivo"
+                        value="Guardar archivo"
+                    />
                 </div>
             </form>
         </section>

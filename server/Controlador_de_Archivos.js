@@ -8,8 +8,6 @@ function listarArchivos() {
     return fs.readdirSync(directorioMarkdown).filter(archivo => archivo.endsWith('.md'))
 }
 
-console.log(listarArchivos())
-
 function leerArchivoComoHTML(nombreArchivo) {
     const rutaArchivo = path.join(directorioMarkdown, nombreArchivo);
     if (!fs.existsSync(rutaArchivo)) return null;

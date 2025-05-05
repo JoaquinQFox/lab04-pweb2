@@ -7,17 +7,17 @@ rutas.get('/archivos', (solicitud,respuesta) => {
     respuesta.json({archivos});
 });
 
-rutas.get('/archivos/nombreArchivo', (solicitud,respuesta) => {
-    const nombreArchivo = solicitud.params.nombreArchivo;
+rutas.get('/archivos/:nombreArchivo', (solicitud,respuesta) => {
+    let nombreArchivo = solicitud.params.nombreArchivo;
     const contenidoHTML = leerArchivoComoHTML(nombreArchivo);
     if (contenidoHTML) {
-        respuesta.send(contenidoHTML);
+        respuesta.json({contenidoHTML});
     } else {
         respuesta.status(404).json('Archivo no encontrado');
     }
 });
 
-rutas.post('/archivos', (solicitud,respuesta) => {
+rutas.post('/archivo', (solicitud,respuesta) => {
     const { nombreArchivo, contenido } = solicitud.body;
     const exito = crearArchivoMarkdown(nombreArchivo, contenido);
     if (exito) {

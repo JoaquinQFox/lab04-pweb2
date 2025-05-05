@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Markdown to html</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="app.js"></script>
     </head>
     <body>
         <header>
@@ -28,7 +29,7 @@
         </section>
 
         <section id="crearMd">
-            <h2>Crear / Editar Markdown</h2>
+            <h2>Crear Markdown</h2>
             <form id="formEditarMd">
                 <div class="formDiv">
                     <label for="nombreArchivoMd">Nombre:</label>
@@ -39,7 +40,7 @@
                     <textarea id="textoMd" spellcheck="false"></textarea>
                 </div>
                 <div class="formDiv">
-                    <button type="submit">Guardar archivo</button>
+                    <input type="submit" id="guardarArchivo" value="Guardar archivo">
                 </div>
             </form>
         </section>

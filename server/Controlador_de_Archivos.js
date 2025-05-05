@@ -21,7 +21,7 @@ function crearArchivoMarkdown(nombreArchivo, contenido) {
     const nombreSeguro = nombreArchivo.endsWith('.md') ? nombreArchivo : `${nombreArchivo}.md`;
     const rutaArchivo = path.join(directorioMarkdown, nombreSeguro);
     try {
-        fs.writeFyleSync(rutaArchivo, contenido);
+        fs.writeFileSync(rutaArchivo, contenido);
         return true;
     } catch (err) {
         console.error(err);

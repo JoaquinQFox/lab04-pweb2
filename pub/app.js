@@ -1,5 +1,21 @@
 
 document.addEventListener('DOMContentLoaded', cargarArchivos);
+document.addEventListener('DOMContentLoaded', formularioVerificador);
+
+function formularioVerificador () {
+	const nombre = document.querySelector("#nombreArchivoMd");
+	const texto  = document.querySelector("#textoMd");
+	const boton  = document.querySelector("#guardarArchivo");
+	boton.disabled = true;
+
+	document.onkeyup = () => {
+		if (nombre.value.length > 0 && texto.value.length > 0) {
+			boton.disabled = false;
+		} else {
+			boton.disabled = true;
+		}
+	};
+}
 
 function cargarArchivos () {
 	fetch ('/api/archivos')
@@ -30,3 +46,4 @@ function cargarArchivo (nombreArchivo) {
 			document.getElementById("divTextoArchivo").innerHTML = data.contenidoHTML;
 		})
 }
+

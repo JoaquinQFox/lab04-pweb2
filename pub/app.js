@@ -50,7 +50,8 @@ function cargarArchivo (nombreArchivo) {
 	document.getElementById("sectionMostrarMd").style.display = "block";
 }
 
-function crearArchivo () {
+function crearArchivo (event) {
+	event.preventDefault();
 	
 	const nombreArchivo = document.getElementById("nombreArchivoMd").value;
 	const contenido     = document.getElementById("textoMd").value;

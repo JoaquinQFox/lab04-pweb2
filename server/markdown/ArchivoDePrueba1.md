@@ -24,7 +24,7 @@ También hay ~~texto tachado~~.
 
 ### Imagen
 
-![Imagen de ejemplo](https://via.placeholder.com/150)
+![pastel](https://cdn-icons-png.freepik.com/256/13986/13986547.png)
 
 ### Código en línea
 

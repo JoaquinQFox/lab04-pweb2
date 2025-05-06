@@ -25,7 +25,7 @@ header h1 {
     border: 1px solid #d1d9e0;
     border-radius: 8px;
     text-align: center;
-    background-color: white;
+    background-color: #F6F8FA;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 30px;
 }
@@ -34,8 +34,9 @@ header h1 {
     margin: 24px 16px;
     border: 1px solid #D1D9E0;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #F6F8FA;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 #listaTitulo {
@@ -70,12 +71,8 @@ header h1 {
 }
 
 #listaDiv {
-    margin: 8px 20px 12px;
     padding: 4px 10px;
-    border: 1px solid #d1d9e0;
-    border-radius: 4px;
-    background-color: #F6F8FA;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 #sectionMostrarMd {
@@ -84,6 +81,7 @@ header h1 {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: #fff;
+    overflow: hidden;
     display: none;
 }
 
@@ -93,6 +91,7 @@ header h1 {
     padding: 10px 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 14px;
+    background-color: #F6F8FA;
 }
 
 #divTextoArchivo {
@@ -189,12 +188,14 @@ header h1 {
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    overflow: hidden;
 }
 
 #tituloCrearMd {
     width: 100%;
     border-bottom: 1px solid #D1D9E0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #F6F8FA;
 }
 
 #tituloCrearMd h2 {
